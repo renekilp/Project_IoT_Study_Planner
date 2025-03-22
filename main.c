@@ -34,6 +34,7 @@ typedef struct {
 int read_file(const char *filename, TimetableDay timetable[], int *count);
 void print_day(const TimetableDay schedule[], int count, const char *day);
 int compare_times(const void *a, const void *b);
+void fix_user_input(char *str);
 
 // function for the funny banner when the program is run vvv
 void banner(void)
@@ -49,7 +50,7 @@ void banner(void)
     printf("-------------------------------------------------------------------------------\n");
 }
 
-//this function reads the csv file into an array vvv
+// this function reads the csv file into an array vvv
 int read_file(const char *filename, TimetableDay timetable[], int *count)
 {
     FILE *file = fopen(filename, "r");
